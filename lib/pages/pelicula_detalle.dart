@@ -122,9 +122,9 @@ class PeliculaDetalle extends StatelessWidget {
       height: 200.0,
       child: PageView(
         pageSnapping: false,
-        controller: PageController(viewportFraction: 0.3, initialPage: 1),
+        controller: PageController(viewportFraction: 0.35, initialPage: 1),
         children: 
-        _actorTarjetas( actores)
+        _actorTarjetas(context, actores)
          
         
         //itemCount: actores.length,
@@ -133,7 +133,7 @@ class PeliculaDetalle extends StatelessWidget {
     );
   }
 
-List<Widget> _actorTarjetas(List<Actor> actores){
+List<Widget> _actorTarjetas(BuildContext context, List<Actor> actores){
 
   return actores.map( (actor) {
 
@@ -152,7 +152,12 @@ List<Widget> _actorTarjetas(List<Actor> actores){
           Text(
             actor.name,
             overflow: TextOverflow.ellipsis,
-          )
+            style: Theme.of(context).textTheme.subtitle1,
+          ),
+          SizedBox(height: 10.0,),
+          Text(actor.character,
+            overflow: TextOverflow.ellipsis,
+            style: Theme.of(context).textTheme.subtitle1)
         ],
       ),
     );
@@ -177,6 +182,7 @@ List<Widget> _actorTarjetas(List<Actor> actores){
           Text(
             actor.name,
             overflow: TextOverflow.ellipsis,
+            
           )
         ],
       ),

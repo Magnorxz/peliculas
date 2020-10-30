@@ -1,4 +1,4 @@
-#Fri Oct 30 09:19:06 CET 2020
+#Fri Oct 30 13:27:35 CET 2020
 base.0=C\:\\Users\\Magnorxz\\Desktop\\Segundo_Dam\\flutter-disenos-master\\peliculas\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\out\\classes.dex
 path.0=classes.dex
 renamed.0=classes.dex
